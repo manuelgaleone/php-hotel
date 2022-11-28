@@ -69,7 +69,11 @@ $hotels = [
 </head>
 
 <body>
-
+    <ul>
+        <?php foreach ($hotels as $hotel) : ?>
+            <li> <?php echo $hotel["name"] . "<br>" . $hotel["description"] . "<br>" . $hotel["vote"] . "<br>" . $hotel["parking"] . "<br>" . $hotel["distance_to_center"] ?></li>
+        <?php endforeach; ?>
+    </ul>
 </body>
 
 </html>
