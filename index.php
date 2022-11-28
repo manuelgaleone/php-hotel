@@ -53,7 +53,6 @@ $hotels = [
         'vote' => 2,
         'distance_to_center' => 50
     ],
-
 ];
 
 ?>
@@ -71,9 +70,20 @@ $hotels = [
 
 <body>
     <div class="container">
-        <h1 class="text-center py-5">
+        <!--Heading-->
+        <h1 class="text-center py-2">
             Grand Hotel dell'Emilia Romagna:
         </h1>
+        <div class="search_box text-center">
+            <form action="index.php" method="get">
+                <select name="parking" id="parking">
+                    <option value="" disabled selected>Filtra per Parcheggio</option>
+                    <option value="parking">Con parcheggio</option>
+                    <option value="noparking">Senza parcheggio</option>
+                </select>
+            </form>
+        </div>
+        <!--//Heading-->
         <!--Hotel List-->
         <table class="table my-3">
             <thead class="thead-dark">
