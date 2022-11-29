@@ -55,6 +55,14 @@ $hotels = [
     ],
 ];
 
+if (isset($_GET["parking"])) {
+    $hotels = array_filter($hotels, function ($hotel) {
+        return $hotel["parking"];
+    });
+} else {
+    (isset($_GET));
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -81,6 +89,7 @@ $hotels = [
                     <option value="parking">Con parcheggio</option>
                     <option value="noparking">Senza parcheggio</option>
                 </select>
+                <button type="submit">Invia</button>
             </form>
         </div>
         <!--//Heading-->
